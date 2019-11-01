@@ -15,6 +15,8 @@ header {
     color: white;
     background-color: red;
     width: auto;
+    justify-content:center;
+    text-align:center;
   }
 
 .ball, h1{
@@ -58,8 +60,9 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    background-color: white;
+    background-color:lightgray;
     padding: 10px;
+    justify-self:center;
 }
   
 .grid-container > div {
@@ -70,7 +73,7 @@ header {
     font-size: 30px;
     color:white;
     width: auto;
-
+    justify-self:center;
 }
 h1{
   font-size: 20px;
@@ -156,57 +159,11 @@ p{
   }
   
 footer {
-  position: relative;
-  text-align: center;
-  width: auto;
-  justify-self: center;
+    text-align:center;
+    left: 50%;
 }
 
 .type1 {
-  color: white;
-  border: solid 1px black;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: silver;
- margin-left: 50%;
- margin-right: 10%;
-
-}
-
-/* tablet screen */
-@media  (min-width:600px){
-
-header {
-  height: 130px;
-}
-
-.header{
-    margin-top: 40px;
-}
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: lightgray;
-    justify-content: space-evenly;
-    justify-self:center;
-  }
-  
-.grid-container > div {
-    background-color: black;
-    color:white;
-    width: 250px;
-    justify-content: space-evenly;
-    justify-self:center;
-
-}
-  
-.type1 {
-  color: white;
-  border: solid 1px black;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-.type2 {
   color: white;
   border: solid 1px black;
   padding: 5px;
@@ -215,101 +172,187 @@ header {
     margin-right: 10%;
 }
 
+.type2 {
+    color: white;
+    border: solid 1px black;
+    padding: 5px;
+    border-radius: 5px;
+      margin-left: 50%;
+      margin-right: 10%;
+  }
+
+
+/* tablet screen */
+@media  (min-width:600px){
+
+  header {
+    height: 130px;
+    justify-content:center;
+    text-align:center;
+  }
+  .head{
+    margin-top: 40px;
+  }
+  .grid-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  
+  justify-content: space-evenly;
+  }
+  
+.grid-container > div {
+    background-color: grey;
+    text-align: center;
+    width: auto;
+    padding: 20px 0;
+    font-size: 30px;
+    color:white;
+    width: 250px;
+    justify-content: space-evenly;
+
+}
+.image-container{
+  justify-content:center;
+  display: flex;
+  flex-direction: row; 
+  position: relative;
+    }
+    
+    .image-container img {
+        height: 100%;
+        object-fit: contain;
+        justify-content: center;
+    }
+    footer {
+      position: relative;
+      text-align:center;
+      }
+      .type1 {
+        color: white;
+        border: solid 1px black;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: silver;
+        margin-left: 40px;
+        margin-right: 40px;
+      
+      }
     
 
 }
-
-
 /* desktop screens */
 @media (min-width:800px) {
 
-header {
-  height: 150px;
-}
+  .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    position: relative;
+  
+  }
+  header {
+    height: 150px;
+    justify-content:center;
+    text-align:center;
+  }
  
+
 .head{
     margin-top: 50px;
   }
 
 .grid-container {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: white;
+  grid-gap: 10px;
+  background-color: #2196F3;
   padding: 10px;
   justify-content:space-around;
-  justify-content: center; 
+  justify-content: center;
   justify-self:center;
 }
       
-.grid-container > div {
-  background-color: grey;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-  color:white;
-  height: auto;
-  width: 300px;
- align-content: center;
-  position: relative;
-    justify-self: center;
-}
+      .grid-container > div {
+        background-color: grey;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        color:white;
+        height: auto;
+        width: 300px;
+        align-content: center;
+        position: relative;
+        justify-self:center;
+       
+       justify-self: center;
+      }
+      #arrow-position{
+        position: relative; 
+        left: 40%;
+    }
 
-#arrow-position{
-  position: relative; 
-  left: 40%;
-}
-
-p{
- font-size: 20px;
-}
-
-h1 {
-  font-size: 60px;
-}
+    p{
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 60px;
+    }
     
-.image {
-  width: 150px;
- }
-
- .info{
+    .image {
+      width: 150px;
+  }
+  .info{
   position: relative;
   overflow: hidden;
   text-align:center;
   align-content:center;
-  justify-content: center;
-  display:flex;
-  flex-wrap:wrap;
-  text-align:center;
-  display: inline;
   }
   
   
-.image-container, .info{
-  align-content:center;
-  justify-content:center;
-
-}
-  
-.image-container{
+  .image-container, .info{
+      align-content:center;
     justify-content:center;
-    display: flex;
-    flex-direction: row; 
-}
+
+  }
+  
+  .image-container{
+      justify-content:center;
+      display: flex;
+      flex-direction: row; 
+  }
   
   .image-container img {
-    height: 100%;
-    object-fit: contain;
-    justify-content: center;
-    position: relative;
+      height: 100%;
+      object-fit: contain;
+      justify-content: center;
+      position: relative;
     left: 70px;
     bottom: 30px;
- }
+  }
+  
+  .info{
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+    display: inline;
+  }
 
 p{
   display:flex;
   flex-wrap:wrap;
   text-align: justify;
   text-align: start;
+
 }
 
 .defense, .attack {
@@ -321,21 +364,19 @@ p{
   justify-content: center;
 }
 
+footer {
+  position: relative;
+  text-align: center;
+  width: auto;
+  justify-self: center;
+  }
 
 .type1 {
   color: white;
   border: solid 1px black;
   padding: 5px;
   border-radius: 5px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.type2 {
-  color: white;
-  border: solid 1px black;
-  padding: 5px;
-  border-radius: 5px;
+  background-color: silver;
   margin-left: 40px;
   margin-right: 40px;
 }
