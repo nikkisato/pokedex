@@ -1,0 +1,387 @@
+body {
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+}
+
+header {
+    text-align:center;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    width: auto;
+  }
+
+.ball, h1{
+    display: inline;
+    vertical-align: middle;
+    padding: 5px;
+  }
+.sort-search {
+    justify-content: center;
+    text-align:center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search {
+    border: solid black 1px;
+}
+
+.options{
+    border: solid black 1px;
+}
+.arrows {
+    width: 25px;
+    height: 25px;
+    display: inline;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+#arrow-position{
+    position: relative; 
+    left: 40%;
+}
+
+.contain {
+  text-align:center;
+  border: solid red 1px;
+  display: inline;
+  vertical-align: middle;
+}
+
+.grid-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  
+  }
+  
+.grid-container > div {
+    background-color: grey;
+    text-align: center;
+    width: auto;
+    padding: 20px 0;
+    font-size: 30px;
+    color:white;
+    width: auto;
+
+}
+h1{
+  font-size: 20px;
+}
+p{
+  font-size: 12px;
+}
+
+.image {
+    width: 150px;
+    padding-top: 25%;
+
+}
+.image-container, .info{
+  display: inline;
+  vertical-align: middle;
+}
+
+.image-container{
+    align-content:left;
+    justify-content:flex-start;
+    display: flex;
+    flex-direction: row;
+    float:left;
+}
+
+.image-container img {
+    height: 100%;
+    object-fit: contain;
+    justify-content: center;
+    align-content: center;
+}
+
+
+  /* dropdown code  */
+  .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    position: relative;
+  }
+  #dropdown {
+      position: relative;
+      right: 0;
+      left: 20%;
+      display: flex;
+      display: inline;
+      justify-content: flex-end;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+footer {
+    text-align:center;
+    left: 50%;
+}
+
+.type1 {
+  color: white;
+  border: solid 1px black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: silver;
+ margin-left: 50%;
+ margin-right: 10%;
+
+}
+
+/* tablet screen */
+@media  (min-width:600px){
+  .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    position: relative;
+  
+  }
+  header {
+    height: 130px;
+    justify-content:center;
+    text-align:center;
+  }
+  .head{
+    margin-top: 40px;
+  }
+  .grid-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  
+  justify-content: space-evenly;
+  }
+  
+.grid-container > div {
+    background-color: grey;
+    text-align: center;
+    width: auto;
+    padding: 20px 0;
+    font-size: 30px;
+    color:white;
+    width: 250px;
+    justify-content: space-evenly;
+
+}
+.image-container{
+  justify-content:center;
+  display: flex;
+  flex-direction: row; 
+  position: relative;
+    }
+    
+    .image-container img {
+        height: 100%;
+        object-fit: contain;
+        justify-content: center;
+    }
+    footer {
+      position: relative;
+      text-align:center;
+      }
+      .type1 {
+        color: white;
+        border: solid 1px black;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: silver;
+        margin-left: 40px;
+        margin-right: 40px;
+      
+      }
+    
+
+}
+/* desktop screens */
+@media (min-width:800px) {
+
+  .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    position: relative;
+  
+  }
+  header {
+    height: 150px;
+    justify-content:center;
+    text-align:center;
+  }
+ 
+
+.head{
+    margin-top: 50px;
+  }
+
+.grid-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  justify-content:space-around;
+  justify-content: center;
+}
+      
+      .grid-container > div {
+        background-color: grey;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        color:white;
+        height: auto;
+        width: 300px;
+        align-content: center;
+        position: relative;
+       
+       justify-self: center;
+      }
+      #arrow-position{
+        position: relative; 
+        left: 40%;
+    }
+
+    p{
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    
+    .image {
+      width: 150px;
+  }
+  .info{
+  position: relative;
+  overflow: hidden;
+  text-align:center;
+  align-content:center;
+  }
+  
+  
+  .image-container, .info{
+      align-content:center;
+    justify-content:center;
+
+  }
+  
+  .image-container{
+      justify-content:center;
+      display: flex;
+      flex-direction: row; 
+  }
+  
+  .image-container img {
+      height: 100%;
+      object-fit: contain;
+      justify-content: center;
+      position: relative;
+    left: 70px;
+    bottom: 30px;
+  }
+  
+  .info{
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+    display: inline;
+  }
+
+p{
+  display:flex;
+  flex-wrap:wrap;
+  text-align: justify;
+  text-align: start;
+
+}
+
+.defense, .attack {
+  display: inline;
+}
+
+.type{
+  text-align:center;
+  justify-content: center;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  width: auto;
+  justify-self: center;
+  }
+
+
+.type1 {
+  color: white;
+  border: solid 1px black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: silver;
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+
+}
