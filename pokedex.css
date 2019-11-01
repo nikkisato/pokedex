@@ -107,7 +107,6 @@ p{
     align-content: center;
 }
 
-
   /* dropdown code  */
   .dropbtn {
     background-color: white;
@@ -372,7 +371,6 @@ footer {
   justify-self: center;
   }
 
-
 .type1 {
   color: white;
   border: solid 1px black;
@@ -381,7 +379,6 @@ footer {
   background-color: silver;
   margin-left: 40px;
   margin-right: 40px;
-
 }
 
 }

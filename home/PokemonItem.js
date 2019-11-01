@@ -1,6 +1,6 @@
 import Component from '../Component.js';
 
-class ImageItem extends Component {
+class PokemonItem extends Component {
     renderHTML() {
         const data = this.props.data;
 
@@ -12,14 +12,14 @@ class ImageItem extends Component {
         <div class="info">
                 <h2>${data.pokemon}</h2>
                 <p class="id-series">${data.species_id}</p>
-                <p class="defense">${data.defense}</p>
-                <p class="attack">${data.attack}</p>
-                <p class="type1" id='${data.color_1}'>${data.type_1}</p>
-                <p class="type2" id='${data.color_1}'>${data.type_2}</p>
+                <p class="defense">Defense: ${data.defense}</p>
+                <p class="attack">Attack: ${data.attack}</p>
+                <p class="type1" style = background-color:'${data.color_1}'>${data.type_1}</p>
+                <p class="type2" style = background-color:'${data.color_1}'>${data.type_2}</p>
         </div>
     </div>
       `;
     }
 }
 
-export default ImageItem;
+export default PokemonItem;
