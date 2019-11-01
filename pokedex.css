@@ -164,7 +164,7 @@ footer {
     left: 50%;
 }
 
-.type {
+.type1 {
   color: white;
   border: solid 1px black;
   padding: 5px;
@@ -234,7 +234,7 @@ footer {
       position: relative;
       text-align:center;
       }
-      .type {
+      .type1 {
         color: white;
         border: solid 1px black;
         padding: 5px;
@@ -373,7 +373,7 @@ footer {
   }
 
 
-.type {
+.type1 {
   color: white;
   border: solid 1px black;
   padding: 5px;
