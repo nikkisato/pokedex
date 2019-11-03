@@ -1,0 +1,206 @@
+/* mobile */
+body {
+    margin: auto;
+    overflow-x: hidden;
+}
+
+
+.contain {
+  text-align:center;
+  border: solid black 1px;
+  display: inline;
+  vertical-align: middle;
+  border-radius: 20px;
+  overflow: hidden;;
+}
+
+.grid-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: white;
+    padding: 10px;
+}
+  
+.grid-container > div {
+
+    text-align: center;
+    width: auto;
+    padding: 20px 0;
+    font-size: 30px;
+    color:white;
+    width: auto;
+
+}
+
+.id-series{
+  font-size: 25px;
+  justify-content:center;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 70px;
+  padding: 5px;
+  left: 100px;
+position: relative;
+}
+
+h1{
+  font-size: 20px;
+}
+p{
+  font-size: 20px;
+}
+
+.image {
+    width: 150px;
+    padding-top: 25%;
+}
+
+.image-container, .info{
+  display: inline;
+  vertical-align: middle;
+}
+
+.image-container{
+    align-content:left;
+    justify-content:flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container img {
+    height: 100%;
+    object-fit: contain;
+  position:relative;
+    left: 50px;
+
+  
+}
+
+
+.type {
+  color: black;
+  border: solid 2px black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+  vertical-align: center;
+  display:inline;
+}
+
+.defense, .attack {
+  display: inline;
+}
+
+/* tablet screen */
+@media  (min-width:600px){
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: lightgray;
+    justify-content: space-evenly;
+    justify-self:center;
+  }
+  
+.grid-container > div {
+    color:white;
+    width: 300px;
+    justify-content: space-evenly;
+    justify-self:center;
+}
+  
+p{
+  font-size: 20px;
+}
+
+}
+
+
+/* desktop screens */
+@media (min-width:800px) {
+  .navigation {
+    text-align:center;
+      }
+
+
+.head{
+    margin-top: 50px;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: lightgray;
+  padding: 10px;
+  justify-content:space-around;
+  justify-content: center; 
+  justify-self:center;
+}
+      
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  color:white;
+  height: auto;
+  width: 300px;
+  align-content: center;
+  position: relative;
+    justify-self: center;
+}
+
+
+
+h1 {
+  font-size: 60px;
+}
+    
+.image {
+  width: 150px;
+ }
+
+ 
+  
+  
+/* .image-container, .info{
+  align-content:center;
+  justify-content:center;
+
+}
+  
+.image-container{
+    justify-content:center;
+    display: flex;
+
+} */
+  
+  .image-container img {
+    height: 100%;
+    object-fit: contain;
+    justify-content: center;
+    position: relative;
+    left: 70px;
+    bottom: 30px;
+ }
+
+p{
+  display:flex;
+  flex-wrap:wrap;
+  text-align: justify;
+  text-align: start;
+  font-size: 25px;
+}
+
+.defense, .attack {
+  display: inline;
+}
+
+
+
+
+
+
+
+}
