@@ -1,0 +1,33 @@
+.navigation {
+    text-align:center;
+    display: flex;
+    flex-direction: row;
+justify-content: center;
+}
+.sort-search {
+     
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+.search, .options {
+     border: solid black 1px;
+    padding: 10px;
+    display: inline;
+    vertical-align: center;
+}
+
+.search-text, .search, .options {
+    position: relative;
+    display: inline;
+    vertical-align: center;
+}
+
+.options{
+    height: 10px;
+    vertical-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    margin-left: 40px;
+}
+
