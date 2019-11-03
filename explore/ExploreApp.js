@@ -16,12 +16,9 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
-        const gridSection = dom.querySelector('.grid-container');
-        gridSection.appendChild(optionsSection);
-
         const pokemonList = new PokemonList({ pokemon: [] });
         const domPokemonList = pokemonList.renderDOM();
-        gridSection.appendChild(domPokemonList);
+        dom.appendChild(domPokemonList);
 
         const response = await getPokemon();
         const pokemon = response.results;
@@ -45,10 +42,10 @@ class ExploreApp extends Component {
                    </section>
                  
                  <div class="grid-container">
-                 <!-- paging goes here -->
+                 <!-- list goes here -->
 
 
-                 <!-- quote list goes here -->        
+         
 
                     </div>
         
