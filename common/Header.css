@@ -4,6 +4,7 @@ header {
     color: white;
     background-color: red;
     width: auto;
+    height: 140px;
 }
 
 .ball {
@@ -42,21 +43,23 @@ header {
         text-decoration: none;
         text-align:center;
         position: relative;
-        left: 200px;
     }
     
+
     .title, .menu {
+        position: relative;
         vertical-align: middle;
-        display: inline;
+        text-align:center;
+        justify-content: center;;
+
     }
     
     .overall-header{
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .title{
         position: relative;
-        left: 80px;
 
     }
 
@@ -70,6 +73,20 @@ header {
         .header{
             margin-top: 40px;
         }
+        .menu {
+            font-size: 30px;
+            text-decoration: none;
+            text-align:center;
+            position: relative;
+            left: 200px;
+        }
+        .title, .menu {
+            position: relative;
+            vertical-align: middle;
+           display: inline;
+    
+        }
+        
 
     }
 @media (min-width:800px) { 
@@ -79,4 +96,17 @@ header {
            
 .head{
      margin-top: 50px;
+     .menu {
+        font-size: 30px;
+        text-decoration: none;
+        text-align:center;
+        position: relative;
+        left: 200px;
+    }
+    .title, .menu {
+        position: relative;
+        vertical-align: middle;
+       display: inline;
+
+    }
 }

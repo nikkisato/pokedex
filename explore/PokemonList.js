@@ -5,16 +5,14 @@ class PokemonList extends Component {
     renderHTML() {
         return /*html*/`
         <div class="grid-container">
-        
-        
         </div>
      `;
     }
     onRender(dom) {
-        const Data = this.props.data;
+        const Pokemon = this.props.pokemon;
 
-        Data.forEach(data => {
-            const props = { data: data };
+        Pokemon.forEach(pokemon => {
+            const props = { pokemon: pokemon };
             const pokedexItem = new PokemonItem(props);
             const pokedexItemDOM = pokedexItem.renderDOM();
             dom.appendChild(pokedexItemDOM);

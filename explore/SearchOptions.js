@@ -4,7 +4,7 @@ class SearchOptions extends Component {
 
     renderHTML() {
         return /*html*/`
-        <section class="options-section">
+      
         <div class="navigation">
 
         <form class="sort-search">
@@ -22,7 +22,7 @@ class SearchOptions extends Component {
     
         </div>
 
-    </section>
+
         `;
     }
 }

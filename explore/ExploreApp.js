@@ -21,14 +21,14 @@ class ExploreApp extends Component {
         // gridSection.appendChild(paging.renderDOM());
         // gridSection.appendChild(optionsSection);
 
-        const pokemonList = new PokemonList({ data: [] });
+        const pokemonList = new PokemonList({ pokemon: [] });
         const domPokemonList = pokemonList.renderDOM();
         dom.appendChild(domPokemonList);
 
         const response = await getPokemon();
-        const data = response.results;
+        const pokemon = response.results;
 
-        pokemonList.update({ data: data});
+        pokemonList.update({ pokemon: pokemon });
 
 
 

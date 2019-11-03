@@ -1,0 +1,21 @@
+.arrows {
+    width: 40px;
+    height:40px;
+    display: inline;
+    vertical-align: middle;
+  padding: 5px;
+}
+
+.page-num{
+  font-size: 20px;
+}
+
+#arrow-position{
+justify-content: center;
+align-content:center;
+align-self:center;
+justify-items: center;
+justify-self:center;
+display: inline;
+vertical-align: middle;
+}
