@@ -4,18 +4,20 @@ class Header extends Component {
     renderHTML() {
         return /*html*/`
             <header>
-                <div class="header">
-                <img class="ball" src="assets/ball.png">
-                <h1> Pokedex</h1>
+            <div class="overall-header">
 
-                <div class="dropdown" id="dropdown">
-                <button class="dropbtn">Menu</button>
-                     <div class="dropdown-content">
-                    <a href="./">Home</a>
-                    <a href="./pokedex.html">Pokedex</a>
+            <div class="title">
+            <img class="ball" src="assets/ball.png">
+            <h1> Pokedex</h1>
                 </div>
+                <div class="menu">
+                     <a class="button" href="./index.html">Home</a>
+                    <a class="button" href="./pokedex.html">Pokedex</a>
+                     </div> 
+
             </div>
-            </div>
+                    
+               
         </header>
         `;
     }

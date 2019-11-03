@@ -4,40 +4,20 @@ body {
     overflow-x: hidden;
 }
 
-.ball {
-    width: 50px;
-    height: 50px;
-}
 
-header {
-    text-align:center;
-    padding: 5px;
-    color: white;
-    background-color: red;
-    width: auto;
-  }
-
-.ball, h1{
-    display: inline;
-    vertical-align: middle;
-    padding: 5px;
-  }
-
-  .navigation {
+.navigation {
 text-align:center;
-  }
+}
 .sort-search {
     justify-content: center;
     text-align:center;
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
 
 .search, .options {
     border: solid black 1px;
     padding: 10px;
-
 }
 
 .arrows {
@@ -88,6 +68,7 @@ vertical-align: middle;
     width: auto;
 
 }
+
 .id-series{
   font-size: 30px;
   display: flex;
@@ -95,9 +76,7 @@ vertical-align: middle;
   margin-right: 20px;
   top: 0;
 }
-.info{
 
-}
 h1{
   font-size: 20px;
 }
@@ -130,53 +109,6 @@ p{
     align-content: center;
 }
 
-  /* dropdown code  */
-  .dropbtn {
-    background-color: white;
-    color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    /* border-radius: 60px; */
-    position: relative;
-  }
-  #dropdown {
-
-    left: 20px;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
-  
 footer {
   position: relative;
   text-align: center;
@@ -190,21 +122,14 @@ footer {
   padding: 5px;
   border-radius: 5px;
   background-color: silver;
- margin-left: 50%;
- margin-right: 10%;
+  margin-left: 50%;
+  margin-right: 10%;
 
 }
 
 /* tablet screen */
 @media  (min-width:600px){
 
-header {
-  height: 130px;
-}
-
-.header{
-    margin-top: 40px;
-}
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -237,8 +162,6 @@ header {
     margin-right: 10%;
 }
 
-    
-
 }
 
 
@@ -248,10 +171,7 @@ header {
     text-align:center;
       }
 
-header {
-  height: 150px;
-}
- 
+
 .head{
     margin-top: 50px;
   }
@@ -274,14 +194,12 @@ header {
   color:white;
   height: auto;
   width: 300px;
- align-content: center;
+  align-content: center;
   position: relative;
     justify-self: center;
 }
 
-p{
- font-size: 20px;
-}
+
 
 h1 {
   font-size: 60px;
@@ -330,6 +248,7 @@ p{
   flex-wrap:wrap;
   text-align: justify;
   text-align: start;
+  font-size: 20px;
 }
 
 .defense, .attack {
