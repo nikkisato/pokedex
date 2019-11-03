@@ -14,8 +14,8 @@ class PokemonItem extends Component {
                 <p class="id-series">#${data.species_id}</p>
                 <p class="defense">Defense: ${data.defense}</p>
                 <p class="attack">Attack: ${data.attack}</p>
-                <p class="type1" style = background-color:'${data.color_1}'>${data.type_1}</p>
-                <p class="type2" style = background-color:'${data.color_1}'>${data.type_2}</p>
+                <p class="type1" style="background-color:'${data.color_1}'">${data.type_1}</p>
+                <p class="type2" style="background-color:'${data.color_2}'">${data.type_2}</p>
         </div>
     </div>
       `;

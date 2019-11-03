@@ -2,11 +2,13 @@ import Header from '../common/Header.js';
 import Component from '../Component.js';
 import SearchOptions from './SearchOptions.js';
 // import Paging from './Paging.js';
+import PokemonList from './PokemonList.js';
+import  { getPokemon } from '../services/Pokedex-api.js';
 
 
 class ExploreApp extends Component {
 
-    onRender(dom) {
+    async onRender(dom) {
         const header = new Header();
         dom.prepend(header.renderDOM());
 
@@ -19,7 +21,17 @@ class ExploreApp extends Component {
         // gridSection.appendChild(paging.renderDOM());
         // gridSection.appendChild(optionsSection);
 
-        
+        const pokemonList = new PokemonList({ data: [] });
+        const domPokemonList = pokemonList.renderDOM();
+        dom.appendChild(domPokemonList);
+
+        const response = await getPokemon();
+        const data = response.results;
+
+        pokemonList.update({ data: data});
+
+
+
 
     }
 
