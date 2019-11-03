@@ -13,11 +13,14 @@ class SearchOptions extends Component {
             </form>
 
             <select class="options">
+            <p class="search-text">Filter By:</p> 
                 <option value="">Search Attributes</option>
                 <option value="type">Type</option>
                 <option value="attack">Attack</option>
                 <option value="defense">Defense</option>
             </select>
+
+            <button class="submit">Submit</button>
     
     
         </div>

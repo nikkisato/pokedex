@@ -1,9 +1,9 @@
 import Header from '../common/Header.js';
 import Component from '../Component.js';
 import SearchOptions from './SearchOptions.js';
-// import Paging from './Paging.js';
 import PokemonList from './PokemonList.js';
 import { getPokemon } from '../services/Pokedex-api.js';
+import Footer from '../common/Footer.js';
 
 
 class ExploreApp extends Component {
@@ -16,21 +16,20 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
-        // const gridSection = dom.querySelector('.grid-container');
-        // const paging = new Paging();
-        // gridSection.appendChild(paging.renderDOM());
-        // gridSection.appendChild(optionsSection);
+        const gridSection = dom.querySelector('.grid-container');
+        gridSection.appendChild(optionsSection);
 
         const pokemonList = new PokemonList({ pokemon: [] });
         const domPokemonList = pokemonList.renderDOM();
-        dom.appendChild(domPokemonList);
+        gridSection.appendChild(domPokemonList);
 
         const response = await getPokemon();
         const pokemon = response.results;
 
         pokemonList.update({ pokemon: pokemon });
 
-
+        const footer = new Footer();
+        dom.appendChild(footer.renderDOM());
 
 
     }

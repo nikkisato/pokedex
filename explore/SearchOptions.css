@@ -17,7 +17,7 @@ justify-content: center;
     vertical-align: center;
 }
 
-.search-text, .search, .options {
+.search-text, .search, .options, .submit {
     position: relative;
     display: inline;
     vertical-align: center;
@@ -31,3 +31,8 @@ justify-content: center;
     margin-left: 40px;
 }
 
+
+.submit{
+
+    height: 50px;
+}
