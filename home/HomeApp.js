@@ -1,25 +1,28 @@
 import Component from '../Component.js';
+import Header from '../common/Header.js';
 
-class Header extends Component {
+class HomeApp extends Component {
+
+    onRender(dom) {
+        const header = new Header();
+        dom.prepend(header.renderDOM());
+    }
+
     renderHTML() {
         return /*html*/`
-        <header>
-        <div class="head">
-        <img class="ball" src="../">
-        <h1>Pokedex</h1>
-    
-        <div class="dropdown" id="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Pokemon</a>
-            </div>
-        </div>
-    </div>
-</header>
-`;
+            <div> 
+                 <main>
+                 <div class="center">
+                     <h2>This is the Home page </h2>
+                     <br>
+                     <a class ="button" href="./pokedex.html"> Click here to go to pokedex</a>
+        
+                        
+           
+            </main>
+     </div>
+    `;
     }
 }
 
-export default Header;
+export default HomeApp;

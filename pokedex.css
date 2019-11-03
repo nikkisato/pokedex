@@ -22,28 +22,44 @@ header {
     vertical-align: middle;
     padding: 5px;
   }
+
+  .navigation {
+text-align:center;
+  }
 .sort-search {
     justify-content: center;
     text-align:center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }
 
 .search, .options {
     border: solid black 1px;
+    padding: 10px;
+
 }
 
 .arrows {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height:40px;
     display: inline;
     vertical-align: middle;
-    padding: 5px;
+  padding: 5px;
+}
+
+.page-num{
+  font-size: 20px;
 }
 
 #arrow-position{
-    position: relative; 
-    left: 40%;
+justify-content: center;
+align-content:center;
+align-self:center;
+justify-items: center;
+justify-self:center;
+display: inline;
+vertical-align: middle;
 }
 
 .contain {
@@ -70,6 +86,16 @@ header {
     font-size: 30px;
     color:white;
     width: auto;
+
+}
+.id-series{
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  top: 0;
+}
+.info{
 
 }
 h1{
@@ -112,16 +138,12 @@ p{
     font-size: 16px;
     border: none;
     cursor: pointer;
-    border-radius: 60px;
+    /* border-radius: 60px; */
     position: relative;
   }
   #dropdown {
-      position: relative;
-      right: 0;
-      left: 20%;
-      display: flex;
-      display: inline;
-      justify-content: flex-end;
+
+    left: 20px;
   }
   .dropdown {
     position: relative;
@@ -222,6 +244,9 @@ header {
 
 /* desktop screens */
 @media (min-width:800px) {
+  .navigation {
+    text-align:center;
+      }
 
 header {
   height: 150px;
@@ -252,11 +277,6 @@ header {
  align-content: center;
   position: relative;
     justify-self: center;
-}
-
-#arrow-position{
-  position: relative; 
-  left: 40%;
 }
 
 p{
