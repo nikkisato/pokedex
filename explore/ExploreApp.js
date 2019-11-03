@@ -3,7 +3,7 @@ import Component from '../Component.js';
 import SearchOptions from './SearchOptions.js';
 // import Paging from './Paging.js';
 import PokemonList from './PokemonList.js';
-import  { getPokemon } from '../services/Pokedex-api.js';
+import { getPokemon } from '../services/Pokedex-api.js';
 
 
 class ExploreApp extends Component {
