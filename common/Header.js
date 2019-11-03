@@ -14,7 +14,6 @@ class Header extends Component {
                      <a class="button" href="./index.html">Home</a>
                     <a class="button" href="./pokedex.html">Pokedex</a>
                      </div> 
-
             </div>
                     
                

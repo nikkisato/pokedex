@@ -23,3 +23,7 @@ class HomeApp extends Component {
 }
 
 export default HomeApp;
+
+const app = new HomeApp();
+const dom = app.renderDOM();
+document.body.prepend(dom);
