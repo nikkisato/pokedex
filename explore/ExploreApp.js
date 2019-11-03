@@ -1,6 +1,7 @@
 import Header from '../common/Header.js';
 import Component from '../Component.js';
 import SearchOptions from './SearchOptions.js';
+// import Paging from './Paging.js';
 
 
 class ExploreApp extends Component {
@@ -13,8 +14,13 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
+        // const gridSection = dom.querySelector('.grid-container');
+        // const paging = new Paging();
+        // gridSection.appendChild(paging.renderDOM());
+        // gridSection.appendChild(optionsSection);
 
         
+
     }
 
     renderHTML() {
