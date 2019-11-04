@@ -5,23 +5,14 @@ class SearchOptions extends Component {
 
     onRender(form) {
         const searchInput = form.querySelector('input[name=search]');
-        const typeMenu = form.querySelector('input[name=type]');
 
         function updateControls() {
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
 
             searchInput.value = searchParams.get('s') || '';
-
-            const type = searchParams.get('type');
-            if (type) {
-                typeMenu.forEach(typeMenu => {
-                    typeMenu.checked = typeMenu.value === type;
-                });
-            }
-
         }
-
+      
         updateControls();
 
         window.addEventListener('hashchange', () => {
@@ -35,8 +26,7 @@ class SearchOptions extends Component {
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
 
-            searchParams.set('type', formData.get('type'));
-            searchParams.set('s', formData.get('search'));
+            searchParams.set('pokemon', formData.get('search'));
             searchParams.set('page', 1);
 
             window.location.hash = searchParams.toString();
@@ -49,7 +39,7 @@ class SearchOptions extends Component {
         <div class="navigation">
         <div class="search-for">
                      <p class="search-text-for">Search For:</p> 
-                     <input class="search-for-input" name="search">
+                     <input id="search" class="search-for-input" name="search">
              </div>
             <br>
 
@@ -57,23 +47,21 @@ class SearchOptions extends Component {
         <p class="search-text-filter">Filter By:</p> 
         <fieldset class="type">
         <label class="radio" >
-                  <input type="radio" name="type" value="type" checked>
+                  <input type="radio" name="type" value="type" >
                   Type
-        </label>
-        <br>
-
-        <label>
-                     <input type="radio" name="type" value="attack" >
-                     Attack
-        </label>
-            <br>
-        <label>
-                 <input type="radio" name="type" value="defense" >
-                 Defense
-        </label>
-
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="type" value="attack" >
+                         Attack
+                    </label>
+                        <br>
+                    <label>
+                        <input type="radio" name="type" value="defense" >
+                        Defense
+                    </label>
         </fieldset>
-            <input class="search-filter" name="search">
+            <input id="search-filter" class="search-filter" name="search">
         </div>
             <button class="submit">Submit</button>
         </div>
@@ -81,8 +69,6 @@ class SearchOptions extends Component {
 
         `;
     }
-
-
 }
 
 export default SearchOptions;

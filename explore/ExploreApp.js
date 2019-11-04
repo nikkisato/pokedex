@@ -4,7 +4,7 @@ import SearchOptions from './SearchOptions.js';
 import PokemonList from './PokemonList.js';
 import { getPokemon } from '../services/Pokedex-api.js';
 import Footer from '../common/Footer.js';
-import Paging from './Paging.js';
+// import Paging from './Paging.js';
 
 
 class ExploreApp extends Component {
@@ -17,10 +17,9 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
-
         const listSection = dom.querySelector('.list-section');
-        const pokemonPaging = new Paging({ totalResults: 0 });
-        listSection.appendChild(pokemonPaging.renderDOM());
+        // const pokemonPaging = new Paging({ totalResults: 0 });
+        // listSection.appendChild(pokemonPaging.renderDOM());
 
         const pokemonList = new PokemonList({ pokemon: [] });
         listSection.appendChild(pokemonList.renderDOM());
@@ -31,7 +30,7 @@ class ExploreApp extends Component {
             const pokemonData = response.results;
             const totalResults = response.totalResults;
             pokemonList.update({ pokemon: pokemonData });
-            pokemonPaging.update({ totalResults: totalResults });
+            // pokemonPaging.update({ totalResults: totalResults });
             console.log({ totalResults });
         }
         
