@@ -4,11 +4,12 @@ import SearchOptions from './SearchOptions.js';
 import PokemonList from './PokemonList.js';
 import { getPokemon } from '../services/Pokedex-api.js';
 import Footer from '../common/Footer.js';
+import Paging from './Paging.js';
 
 
 class ExploreApp extends Component {
 
-    async onRender(dom) {
+    onRender(dom) {
         const header = new Header();
         dom.prepend(header.renderDOM());
 
@@ -16,19 +17,35 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
+        // const paging = new Paging({ totalResults: 0 });
+        // optionsSection.appendChild(paging.renderDOM());
+
+
+        const listSection = dom.querySelector('.list-section');
+        const pokemonPaging = new Paging({ totalResults: 0 });
+        listSection.appendChild(pokemonPaging.renderDOM());
+
         const pokemonList = new PokemonList({ pokemon: [] });
-        const domPokemonList = pokemonList.renderDOM();
-        dom.appendChild(domPokemonList);
+        listSection.appendChild(pokemonList.renderDOM());
 
-        const response = await getPokemon();
-        const pokemon = response.results;
 
-        pokemonList.update({ pokemon: pokemon });
-
+        async function loadPokemon() {
+            const response = await getPokemon();
+            const pokemonData = response.results;
+            const totalResults = response.totalResults;
+            pokemonList.update({ pokemon: pokemonData });
+            pokemonPaging.update({ totalResults: totalResults });
+            console.log({ totalResults });
+        }
+        
+        loadPokemon();
+        
         const footer = new Footer();
         dom.appendChild(footer.renderDOM());
 
-
+        window.addEventListener('hashchange', () => {
+            loadPokemon();
+        });
     }
 
     renderHTML() {
@@ -41,13 +58,11 @@ class ExploreApp extends Component {
                  <!-- options go here -->
                    </section>
                  
+                   <section class="list-section">
                  <div class="grid-container">
                  <!-- list goes here -->
-
-
-         
-
                     </div>
+                </section>
         
             </main>
      </div>
