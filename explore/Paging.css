@@ -3,7 +3,7 @@
     height:40px;
     display: inline;
     vertical-align: middle;
-  padding: 5px;
+    padding: 5px;
 }
 
 .page-num{
@@ -46,3 +46,7 @@ vertical-align: middle;
   margin: 0 10px;
 }
 
+
+.prev, .next {
+  border: solid 1px black;
+}

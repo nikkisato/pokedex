@@ -5,7 +5,7 @@ class SearchOptions extends Component {
 
     onRender(form) {
         const searchInput = form.querySelector('input[name=search]');
-        const typeMenu = form.querySelector('input [name=type]');
+        const typeMenu = form.querySelector('input[name=type]');
 
         function updateControls() {
             const queryString = window.location.hash.slice(1);
@@ -47,24 +47,42 @@ class SearchOptions extends Component {
         return /*html*/`
         <form class="sort-search">
         <div class="navigation">
-                     <p class="search-text">Search For:</p> 
-                     <input class="search" name="search">
-        
-            <select class="options">
-            <p class="search-text">Filter By:</p> 
-                <option value="">Search Attributes</option>
-                <option value="type">Type</option>
-                <option value="attack">Attack</option>
-                <option value="defense">Defense</option>
-            </select>
+        <div class="search-for">
+                     <p class="search-text-for">Search For:</p> 
+                     <input class="search-for-input" name="search">
+             </div>
+            <br>
 
+        <div class="filter-by">
+        <p class="search-text-filter">Filter By:</p> 
+        <fieldset class="type">
+        <label class="radio" >
+                  <input type="radio" name="type" value="type" checked>
+                  Type
+        </label>
+        <br>
+
+        <label>
+                     <input type="radio" name="type" value="attack" >
+                     Attack
+        </label>
+            <br>
+        <label>
+                 <input type="radio" name="type" value="defense" >
+                 Defense
+        </label>
+
+        </fieldset>
+            <input class="search-filter" name="search">
+        </div>
             <button class="submit">Submit</button>
-
         </div>
         </form>
 
         `;
     }
+
+
 }
 
 export default SearchOptions;

@@ -17,9 +17,6 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
-        // const paging = new Paging({ totalResults: 0 });
-        // optionsSection.appendChild(paging.renderDOM());
-
 
         const listSection = dom.querySelector('.list-section');
         const pokemonPaging = new Paging({ totalResults: 0 });
