@@ -20,49 +20,36 @@ class SearchOptions extends Component {
                 });
             }
 
-        
-
-
-
-
-
-
-
         }
-    }
 
-    updateControls();
-
-    window.addEventListener('hashchange', () => {
         updateControls();
-    });
 
-    form.addEventListener('submit', event => {
-        event.preventDefault();
-        const formData = new FormData(form);
+        window.addEventListener('hashchange', () => {
+            updateControls();
+        });
 
-        const queryString = window.location.hash.slice(1);
-        const searchParams = new URLSearchParams(queryString);
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            const formData = new FormData(form);
 
-        searchParams.set('type', formData.get('type'));
-        searchParams.set('s', formData.get('search'));
-        searchParams.set('page', 1);
+            const queryString = window.location.hash.slice(1);
+            const searchParams = new URLSearchParams(queryString);
 
-        window.location.hash = searchParams.toString();
+            searchParams.set('type', formData.get('type'));
+            searchParams.set('s', formData.get('search'));
+            searchParams.set('page', 1);
 
-
-    };
+            window.location.hash = searchParams.toString();
+        });
+    }
 
     renderHTML() {
         return /*html*/`
-      
-        <div class="navigation">
-
         <form class="sort-search">
+        <div class="navigation">
                      <p class="search-text">Search For:</p> 
                      <input class="search" name="search">
-          
-
+        
             <select class="options">
             <p class="search-text">Filter By:</p> 
                 <option value="">Search Attributes</option>
@@ -72,13 +59,12 @@ class SearchOptions extends Component {
             </select>
 
             <button class="submit">Submit</button>
-    
-    
+
         </div>
         </form>
 
         `;
     }
-};
+}
 
 export default SearchOptions;

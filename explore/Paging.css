@@ -25,6 +25,7 @@ vertical-align: middle;
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 10px;
+  border: solid black 1px;
 }
 
 .paging button {
