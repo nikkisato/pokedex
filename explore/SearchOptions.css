@@ -42,20 +42,6 @@
     color:black;
 }
 
-.search-text-for, .search-for {
+.search-text-for, .search-for, .submit {
     display:inline;
-}
-
-.search-text-filter, .options, .search-filter, .submit {
-    display:inline;
-}
-.type{
-    text-align: left;
-
-}
-
-.radio{
-    font-size: 14px;
-    display:inline;
-    
 }

@@ -6,7 +6,7 @@ export async function getPokemon() {
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
+
 
     //display this if api fails 
     if (data.Response === 'False'){

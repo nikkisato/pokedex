@@ -41,28 +41,6 @@ class SearchOptions extends Component {
                      <p class="search-text-for">Search For:</p> 
                      <input id="search" class="search-for-input" name="search">
              </div>
-            <br>
-
-        <div class="filter-by">
-        <p class="search-text-filter">Filter By:</p> 
-        <fieldset class="type">
-        <label class="radio" >
-                  <input type="radio" name="type" value="type" >
-                  Type
-                    </label>
-                    <br>
-                    <label>
-                        <input type="radio" name="type" value="attack" >
-                         Attack
-                    </label>
-                        <br>
-                    <label>
-                        <input type="radio" name="type" value="defense" >
-                        Defense
-                    </label>
-        </fieldset>
-            <input id="search-filter" class="search-filter" name="search">
-        </div>
             <button class="submit">Submit</button>
         </div>
         </form>

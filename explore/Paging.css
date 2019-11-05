@@ -1,52 +1,40 @@
-.arrows {
-    width: 40px;
-    height:40px;
-    display: inline;
-    vertical-align: middle;
-    padding: 5px;
-}
-
-.page-num{
-  font-size: 20px;
-}
-
-#arrow-position{
-justify-content: center;
-align-content:center;
-align-self:center;
-justify-items: center;
-justify-self:center;
-display: inline;
-vertical-align: middle;
-}
 
 .paging {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   margin-bottom: 10px;
-  border: solid black 1px;
+  display:inline;
+ display:flex;
+ justify-content: flex-end;
+ justify-self: center;
+  vertical-align: middle;
+  margin-right: 50px;
 }
 
 .paging button {
   position: relative;
   height: 50px;
   width: 50px;
-  font-size: 2em;
-  background-color: sandybrown;
-  color: white;
+  font-size: 1.7em;
+  background-color: red;
+  justify-content:center;
+  color: black;
+  border: solid 1px black;
 }
 
 .paging button:disabled {
-  background-color: bisque;
-  color: oldlace;
+  background-color: rgb(236, 89, 63);
+  color: white;
 }
 
 .paging span {
   margin: 0 10px;
+  font-size: 20px;
+  justify-content:center;
+  margin-top: 15px;
+  vertical-align: center;
 }
 
-
-.prev, .next {
+/* 
+.prev, .next{
   border: solid 1px black;
-}
+} */
+

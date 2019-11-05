@@ -98,7 +98,6 @@ p{
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: lightgray;
     justify-content: space-evenly;
     justify-self:center;
   }
@@ -131,7 +130,6 @@ p{
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  background-color: lightgray;
   padding: 10px;
   justify-content:space-around;
   justify-content: center; 

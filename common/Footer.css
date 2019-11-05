@@ -4,5 +4,8 @@ footer {
     width: auto;
     justify-self: center;
     background-color:grey;
+    height: 75px;
+    align-self: center;
+    
   }
   

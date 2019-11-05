@@ -4,7 +4,7 @@ import SearchOptions from './SearchOptions.js';
 import PokemonList from './PokemonList.js';
 import { getPokemon } from '../services/Pokedex-api.js';
 import Footer from '../common/Footer.js';
-// import Paging from './Paging.js';
+import Paging from './Paging.js';
 
 
 class ExploreApp extends Component {
@@ -17,10 +17,12 @@ class ExploreApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
-        const listSection = dom.querySelector('.list-section');
-        // const pokemonPaging = new Paging({ totalResults: 0 });
-        // listSection.appendChild(pokemonPaging.renderDOM());
+        const pokemonPage = dom.querySelector('.page');
+        const pokemonPaging = new Paging({ count: 0 });
+        pokemonPage.appendChild(pokemonPaging.renderDOM());
 
+
+        const listSection = dom.querySelector('.list-section');
         const pokemonList = new PokemonList({ pokemon: [] });
         listSection.appendChild(pokemonList.renderDOM());
 
@@ -28,10 +30,10 @@ class ExploreApp extends Component {
         async function loadPokemon() {
             const response = await getPokemon();
             const pokemonData = response.results;
-            const totalResults = response.totalResults;
+            const count = response.count;
             pokemonList.update({ pokemon: pokemonData });
-            // pokemonPaging.update({ totalResults: totalResults });
-            console.log({ totalResults });
+            pokemonPaging.update({ count });
+            console.log({ count });
         }
         
         loadPokemon();
@@ -53,12 +55,12 @@ class ExploreApp extends Component {
                  <section class="options-section">
                  <!-- options go here -->
                    </section>
+                   <section class="page">
+                   </section>
                  
                    <section class="list-section">
-                 <div class="grid-container">
-                 <!-- list goes here -->
-                    </div>
-                </section>
+                
+                 </section>
         
             </main>
      </div>
