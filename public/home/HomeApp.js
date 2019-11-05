@@ -16,6 +16,7 @@ class HomeApp extends Component {
                      <h2>This is the Home page </h2>
                      <br>
                      <a class ="button" href="./pokedex.html"> Click here to go to pokedex</a>
+
             </main>
      </div>
     `;
@@ -24,6 +25,3 @@ class HomeApp extends Component {
 
 export default HomeApp;
 
-const app = new HomeApp();
-const dom = app.renderDOM();
-document.body.prepend(dom);

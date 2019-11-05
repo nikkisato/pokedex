@@ -33,7 +33,7 @@ class ExploreApp extends Component {
             const count = response.count;
             pokemonList.update({ pokemon: pokemonData });
             pokemonPaging.update({ count });
-            console.log({ count });
+     
         }
         
         loadPokemon();
